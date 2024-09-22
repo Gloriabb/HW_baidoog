@@ -1,0 +1,104 @@
+---
+title: "Home Work 1"
+author: "Gloria Baidoo"
+format: pdf
+editor: visual
+code_folding: hide
+---
+
+```{r}
+knitr::opts_chunk$set(echo = TRUE)
+library(tidyverse)
+library(tinytex)
+library(magick)
+```
+
+# 1. What is the difference between shell and bash?
+
+A shell is a general term for a command-line interface (CLI) that allows users to interact with the operating system by running commands, scripts, and programs. It serves as an intermediary between the user and the system's kernel. examples of shells are Bash (Bourne Again Shell), sh (Bourne shell), csh (C shell), zsh (Z shell), ksh (Korn shell) and Bash Bash stands for Bourne Again SHell and is one of the most widely used shells in Unix-like systems (e.g., Linux). It is an improved version of the original Bourne shell (sh), providing more features, such as command history, improved scripting capabilities, and command-line editing.
+
+# 2. To respond to this question, you need to use terminal/Bash and have a screenshot of your terminal/bash.
+
+## A. What is your home directory?
+
+```{r}
+knitr::include_graphics("C:\\Users\\auuser\\Desktop\\American University\\FALL 2024\\Data_Science2\\home work 01\\homedirec.PNG")
+```
+
+## B. What files/folders exist in it?
+
+```{r}
+knitr::include_graphics("C:\\Users\\auuser\\Desktop\\American University\\FALL 2024\\Data_Science2\\home work 01\\savedfiles.PNG")
+```
+
+# 3. You need to use terminal/Bash and have a screenshot of your terminal/bash.
+
+## A. Where does the command `cd../../` take you? Run the command `pwd` and explain the output!
+
+```{r}
+knitr::include_graphics("C:\\Users\\auuser\\Desktop\\American University\\FALL 2024\\Data_Science2\\home work 01\\cd2&pwd.PNG")
+```
+
+#\*\*The command cd ../../ in a terminal or Bash shell moves you up two directory levels from your current working directory. Before cd../../, the working directory was Desktop/American University/FALL 2024/Data_Science2 and after i initiated the command it moved the FALL 2024 and Data_Science2. When I used pwd it printed the current directory after initiating the cd../../ command
+
+## B. What does the command `cd` do? Run the command `pwd` and explain the output\*\* The command cd stands for "change directory". It is used in the terminal to navigate between directories (folders) in a file system. When you run cd followed by the path of a directory, it moves you from your current working directory to the specified directory. running a cd without a path takes you to your home directory.This is like setwd() in R. As when we specified paths in R,using two periods mean “move back a folder”
+
+```{r}
+knitr::include_graphics("C:\\Users\\auuser\\Desktop\\American University\\FALL 2024\\Data_Science2\\home work 01\\cd&pwd.PNG")
+```
+
+# 4. You need to use terminal/Bash and have a screenshot of your terminal/bash Read the manual page of ls. What does the `a` flag do? What does the `l` flag do?
+
+```{r}
+knitr::include_graphics("C:\\Users\\auuser\\Desktop\\American University\\FALL 2024\\Data_Science2\\home work 01\\ls.PNG")
+```
+
+#\*\*The -a flag (or --all) is used to list all files, including hidden files (those whose names begin with a dot .) It also means do not ignore entries starting with. The -l flag stands for long listing format or do not list implied entries matching shell PATTERN. When used with ls, it displays detailed information about each file or directory, including:Permissions,Number of links, Owner of the file, Group the file belongs to and File size
+
+# 5. You need to use terminal/Bash and have a screenshot of your terminal/bash
+
+## A. Create a folder within your home directory, which was identified in Question 2, and name it 'temp_bash'.
+
+```{r}
+knitr::include_graphics("C:\\Users\\auuser\\Desktop\\American University\\FALL 2024\\Data_Science2\\home work 01\\temp_bash.PNG")
+```
+
+## B. Create a new file using the command `touch` and name it `myfile.txt` inside the new folder `temp_bash` and run `ls` to show that the file is inside the folder.
+
+```{r}
+knitr::include_graphics("C:\\Users\\auuser\\Desktop\\American University\\FALL 2024\\Data_Science2\\home work 01\\myfiletxt.PNG")
+```
+
+## C. Run the `stat myfile.txt` command and explain the information retrieved from the output. Here is an example of what should be included in the output and a brief explanation for each part.`Blocks: 0`The number of blocks for the file.`IO Block: 65536` The size of each block.
+
+```{r}
+knitr::include_graphics("C:\\Users\\auuser\\Desktop\\American University\\FALL 2024\\Data_Science2\\home work 01\\stat.PNG")
+```
+
+\#**Blocks: Number of blocks allocated to the file (0 for an empty file).** IO Block: Size of each block, which in this case is 65536 bytes. **Inode: An identifier for the file on the disk.** Access, Modify, Change: Show the last times the file was accessed, modified, or had metadata changes.
+
+# 6
+
+## A. Use the command `>>` and add the following line This line is my first line. Now add the following line This line is my second line. Then, run cat myfile.txt to show that the line has been added.
+
+```{r}
+knitr::include_graphics("C:\\Users\\auuser\\Desktop\\American University\\FALL 2024\\Data_Science2\\home work 01\\cat.PNG")
+```
+
+#\*\* echo "text" \>\> file: Appends the specified text to the file. The \>\> operator adds the text to the end of the file without overwriting the existing content.cat file: Displays the content of the file.
+
+## B. Copy the file myfile.txt to file copy_myfile.txt with the command `cp`
+
+```{r}
+knitr::include_graphics("C:\\Users\\auuser\\Desktop\\American University\\FALL 2024\\Data_Science2\\home work 01\\cp.PNG")
+```
+
+#\*\* This command will create a copy of myfile.txt named copy_myfile.txt in the same directory.
+
+## C. Use the command `>` and add the following line This line is a new line to copy_myfile.txt. Then run cat copy_myfile.txt to show the line is added.
+
+```{r}
+knitr::include_graphics("C:\\Users\\auuser\\Desktop\\American University\\FALL 2024\\Data_Science2\\home work 01\\copy.PNG")
+```
+
+## D. Explain the difference between `>` and `>>` \*\*The \> operator redirects output to a file, overwriting the file's existing content if the file already exists. If the file exists, its content is replaced with the new output. If the file does not exist, it is created and the output is written to it whiles The \>\> operator redirects output to a file, appending the new content to the end of the file.If the file exists, the new output is added to the end of the existing content. If the file does not exist, it is created and the output is written to it.
