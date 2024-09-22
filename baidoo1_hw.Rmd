@@ -1,0 +1,15 @@
+---
+title: "Random Numbers"
+author: "Gloria Baidoo"
+date: "2024-09-22"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r}
+ran_numbers <- rnorm(100, mean = 25, sd = 1)
+print(ran_numbers)
+```
